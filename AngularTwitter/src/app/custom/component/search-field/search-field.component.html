@@ -1,0 +1,8 @@
+<div class="input-group">
+  <div class="form-group has-feedback">
+    <input #searchField type="text" class="form-control" (keyup.enter)="onSearchChanged(searchField.value)"
+           placeholder={{placeHolder}} appInputSearchFilter>
+    <span *ngIf="!loading" class="glyphicon glyphicon-search form-control-feedback" aria-hidden="false"></span>
+    <span *ngIf="loading" class="glyphicon glyphicon-refresh glyphicon-refresh-animate form-control-feedback" id="loadingIcon"></span>
+  </div>
+</div>

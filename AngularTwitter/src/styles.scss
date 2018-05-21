@@ -1,0 +1,69 @@
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// import style for Angular Material start
+@import '~@angular/material/theming';
+@import url('//fonts.googleapis.com/icon?family=Material+Icons');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@import '~font-awesome/scss/font-awesome';
+@include mat-core();
+
+$primary: mat-palette($mat-lime, 500);
+$accent:  mat-palette($mat-lime, 500, A200, A400);
+$warn:    mat-palette($mat-red, 500);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+// import style for Angular Material end
+
+
+// font style for whole application starts
+.header {
+  font-family: $font-family;
+  font-size: 1.5rem;
+  padding-left: $header-padding;
+}
+
+.subTitle {
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding-left: $body-padding;
+}
+
+html, body, label {
+  font-weight: normal !important;
+}
+
+@media (max-width: $mobileS-width){
+  html, body {
+    font-size: $mobileS-font-size;
+  }
+}
+
+@media (min-width: $mobileS-width+1) and (max-width: $tablet-width){
+  html, body {
+    font-size: $tablet-font-size;
+  }
+}
+
+@media (min-width: $tablet-width+1) and (max-width: $laptop-width){
+  html, body {
+    font-size: $laptop-font-size;
+  }
+}
+
+@media (min-width: $laptop-width+1) and (max-width: $laptopL-width) {
+  html, body {
+    font-size: $laptopL-font-size;
+  }
+}
+
+@media (min-width: $laptopL-width+1) {
+  html, body {
+    font-size: $_4k-font-size;
+  }
+}
+// font style for whole application ends

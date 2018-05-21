@@ -1,0 +1,48 @@
+// variables start
+$hover-background: #e6e6e6;
+$current-background: #2199e8;
+$disabled-color: #cacaca;
+$color: #0a0a0a;
+// variables end
+
+.pagination {
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+.pagination li {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0.3rem;
+}
+
+.pagination a,
+.pagination button {
+  color: $color;
+  display: block;
+  border-radius: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+.pagination a:hover,
+.pagination button:hover {
+  background: $hover-background;
+}
+
+.pagination .current {
+  background: $current-background;
+  cursor: default;
+}
+
+.pagination .disabled {
+  color: $disabled-color;
+  cursor: default;
+}
+
+.pagination .disabled:hover {
+  background: transparent;
+}

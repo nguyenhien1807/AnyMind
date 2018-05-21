@@ -1,0 +1,17 @@
+<label class="header">{{title}}</label>
+
+<!--Tab area start-->
+<ul class="nav nav-tabs" xmlns="http://www.w3.org/1999/html">
+  <li class="active"><a data-toggle="tab" href="#hashtagSearch" (click)="tabChanged($event)">{{hastagTabTitle}}</a></li>
+  <li><a data-toggle="tab" href="#userSearch" (click)="tabChanged($event)">{{userTabTitle}}</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="hashtagSearch" class="tab-pane active">
+    <app-main-body [subTitle]="hastagTabTitle" [placeHolderTxt]="placeHolderTxt" [searchType]="searchType"></app-main-body>
+  </div>
+  <div id="userSearch" class="tab-pane">
+    <app-main-body [subTitle]="userTabTitle" [placeHolderTxt]="placeHolderTxt" [searchType]="searchType"></app-main-body>
+  </div>
+</div>
+<!--Tab area end-->

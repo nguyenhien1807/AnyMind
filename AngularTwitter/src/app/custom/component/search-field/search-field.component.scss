@@ -1,0 +1,44 @@
+@import '../../../../variables';
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  margin-top: -10px;
+}
+
+.form-group {
+  margin-left: $body-padding;
+  margin-bottom: 2rem;
+}
+
+form-group, .form-control {
+  border-radius: 0px;
+}
+
+.form-control-feedback {
+  z-index: 4;
+}
+
+// loading icon style
+.glyphicon-refresh-animate {
+  -animation: spin .9s infinite linear;
+  -ms-animation: spin .9s infinite linear;
+  -webkit-animation: spinw .9s infinite linear;
+  -moz-animation: spinm .9s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg);}
+  to { transform: scale(1) rotate(360deg);}
+}
+
+@-webkit-keyframes spinw {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spinm {
+  from { -moz-transform: rotate(0deg);}
+  to { -moz-transform: rotate(360deg);}
+}

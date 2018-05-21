@@ -1,0 +1,75 @@
+// Variables starts
+$custom-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+$margin: 3vw;
+$padding-bottom: 2vh;
+$font-table-cell: 0.7rem;
+$minWidth: 300px;
+$maxHeigt: 100vh;
+$cell-margin: 0.6rem;
+// Variable ends
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  min-width: $minWidth;
+  margin-left: $margin;
+  margin-right: $margin;
+  -webkit-box-shadow: $custom-box-shadow;
+  -moz-box-shadow: $custom-box-shadow;
+  box-shadow: $custom-box-shadow;
+  padding-bottom: $padding-bottom;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: $maxHeigt;
+}
+
+.mat-header-cell {
+  font-size: $font-table-cell;
+}
+
+::ng-deep .mat-cell {
+  font-size: $font-table-cell !important;
+  margin-bottom: $cell-margin;
+  margin-top: $cell-margin;
+}
+
+// Tweet column
+.mat-cell:nth-child(1),
+.mat-header-cell:nth-child(1)
+{
+  flex: 0 0 30%;
+  padding-right: 1%;
+  text-align: justify;
+}
+
+.mat-cell:nth-child(2),
+.mat-header-cell:nth-child(2),
+.mat-cell:nth-child(3),
+.mat-header-cell:nth-child(3),
+.mat-cell:nth-child(4),
+.mat-header-cell:nth-child(4)
+{
+  flex: 0 0 10%;
+  text-align: center;
+}
+
+// hashtag colum
+.mat-cell:nth-child(5),
+.mat-header-cell:nth-child(5)
+{
+  flex: 0 0 20%;
+  padding-right: 1%;
+  padding-left: 1%;
+  text-align: justify;
+}
+
+// Date column
+.mat-cell:nth-child(6),
+.mat-header-cell:nth-child(6)
+{
+  flex: 0 0 15%;
+  text-align: justify;
+}

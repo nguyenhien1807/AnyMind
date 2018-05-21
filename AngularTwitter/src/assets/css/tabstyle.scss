@@ -1,0 +1,37 @@
+// common style variables for tab start
+$backgroundColor: #f7f7fa;
+$activeTabColor: #17c5c5;
+$inactiveTabColor: #031b1b;
+$border: 0px;
+$font-tab-header: 0.9rem;
+// common style variables for tab end
+
+// custom style for tab
+.nav-tabs {
+  border: $border;
+  padding-left: 2vw;
+}
+
+.nav-tabs > li, .nav-tabs > li > a {
+  font-size: $font-tab-header;
+  font-weight: 300;
+  border: $border;
+}
+
+// style for active tab
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+  color: $activeTabColor;
+  background-color: $backgroundColor;
+}
+
+// style for in-active tab
+.nav-tabs > li > a {
+  color: $inactiveTabColor;
+  background-color: #fcfcff;
+}
+
+// style for tab content
+.tab-content {
+  background-color: $backgroundColor;
+}
+

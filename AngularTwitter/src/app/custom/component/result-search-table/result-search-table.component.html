@@ -1,0 +1,18 @@
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--Header-->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+    <!--Columns -->
+    <ng-container *ngFor="let name of displayedColumns" matColumnDef={{name}}>
+      <mat-header-cell *matHeaderCellDef> {{name}} </mat-header-cell>;
+      <mat-cell *matCellDef="let element"> {{name | ResultSearchTableHeaderPipe: element | ResultSearchTableContentPipe : name }}
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+
+  <!--Paging-->
+  <app-pagination [pageSize]="pageSize" [itemSize]="itemSize" (pageChanged)="pageChanged($event)"></app-pagination>
+</div>

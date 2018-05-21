@@ -1,0 +1,19 @@
+<ul class="pagination" *ngIf="totalPage > 1">
+  <li>
+    <a [class.disabled]="currentPage === 1" (click)="previousPage()">
+      <span><</span>
+    </a>
+  </li>
+
+  <li [class.current]="currentPage === page" *ngFor="let page of _pageNUmber">
+    <a (click)="changePage(page)">
+      <span>{{page}}</span>
+    </a>
+  </li>
+
+  <li >
+    <a [class.disabled]="currentPage === totalPage" (click)="nextPage()">
+      <span> > </span>
+    </a>
+  </li>
+</ul>
