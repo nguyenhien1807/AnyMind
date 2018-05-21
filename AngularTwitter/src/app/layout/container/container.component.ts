@@ -24,6 +24,10 @@ export class ContainerComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * handle tab change event
+   * @param event
+   */
   tabChanged(event: any) {
     if (event.target.innerText.toLowerCase() === this.hastagTabTitle.toLowerCase()) {
       this.placeHolderTxt = constants.HASHTAG_PLACE_HOLDER;

@@ -26,6 +26,10 @@ export class MainBodyComponent implements OnInit, OnChanges {
     this.dataService.resultSearchData = [];
   }
 
+  /**
+   * handle search text changing event
+   * @param {string} value
+   */
   searchTextChange(value: string) {
     this.apiService.searchTwitter(value, this.searchType).subscribe(response => {
       this.dataService.resultSearchData = response;

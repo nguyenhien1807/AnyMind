@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import {Directive, ElementRef, HostListener} from '@angular/core';
 import {KeyCode} from '../../../common/enum/keyCode';
 import {UtilsService} from '../../../common/service/utils/utils.service';
 
@@ -11,7 +11,8 @@ import {UtilsService} from '../../../common/service/utils/utils.service';
 export class InputSearchFilterDirective {
 
   constructor(private el: ElementRef,
-              private utils: UtilsService) { }
+              private utils: UtilsService) {
+  }
 
   @HostListener('keydown', ['$event']) onKeyDown(event) {
     const e = <KeyboardEvent> event;

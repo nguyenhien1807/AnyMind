@@ -28,11 +28,18 @@ export class PaginationComponent implements OnInit, OnChanges {
    this.initPagination();
   }
 
+  /**
+   * handle changing page event by click directly on page number
+   * @param value
+   */
   changePage(value: any) {
     this.currentPage = value;
     this.pageChanged.emit(this.currentPage);
   }
 
+  /**
+   * handle changing page by clicking on previous button
+   */
    previousPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
@@ -40,6 +47,9 @@ export class PaginationComponent implements OnInit, OnChanges {
     }
   }
 
+  /**
+   * handle changing page by clicking next page
+   */
    nextPage(): void {
     if (this.currentPage < this.totalPage) {
       this.currentPage++;
@@ -54,6 +64,10 @@ export class PaginationComponent implements OnInit, OnChanges {
     this._pageNUmber.push(2);
   }
 
+  /**
+   * Update page number display on UI, only 2 pages are display at same time
+   * @param {boolean} movingNext
+   */
   private updateDisplayPageRange(movingNext: boolean) {
     if (!this._pageNUmber.find(page => page === this.currentPage)) {
       this._pageNUmber = [];

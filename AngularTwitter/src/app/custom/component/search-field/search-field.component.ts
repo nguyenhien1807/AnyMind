@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {FormsModule, Validators} from '@angular/forms';
 import {DataService} from '../../../common/service/data/data.service';
 
@@ -7,7 +7,7 @@ import {DataService} from '../../../common/service/data/data.service';
   templateUrl: './search-field.component.html',
   styleUrls: ['./search-field.component.scss']
 })
-export class SearchFieldComponent implements OnInit {
+export class SearchFieldComponent implements OnInit, OnDestroy {
 
   @Output() searchTextChange: EventEmitter<string> = new EventEmitter<string>();
 
@@ -21,6 +21,10 @@ export class SearchFieldComponent implements OnInit {
     this.dataService.resultSearchDataChange.subscribe( data => {
       this.loading = false;
     });
+  }
+
+  ngOnDestroy() {
+    this.dataService.resultSearchDataChange.unsubscribe();
   }
 
   /**

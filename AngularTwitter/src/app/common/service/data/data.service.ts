@@ -12,6 +12,10 @@ export class DataService {
 
   constructor() { }
 
+  /**
+   * set responded searched Data
+   * @param {Twitter[]} value
+   */
   set resultSearchData(value: Twitter[]) {
     this._resultSearchData = value;
     this.resultSearchDataChange.emit(this._resultSearchData);
