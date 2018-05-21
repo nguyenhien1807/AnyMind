@@ -24,11 +24,6 @@
 
 2. Run `ng serve --proxy-config proxy.conf.json` to start Angular Twitter project
 
-```
-  apiBase: 'http://localhost:5000/',
-  api_page_limit:  '3',
-  api_wait: '0'
-```
 
 ## Release note
 
@@ -41,6 +36,11 @@
 4. Project need to be run with proxy because backend is running with other port.
 
 5. If you want to change page_limit and proxy configuration, change it in `environment.ts`, inside folder `src/environments`
+```
+  apiBase: 'http://localhost:5000/',
+  api_page_limit:  '3',
+  api_wait: '0'
+```
 
 ## Project structure
 
